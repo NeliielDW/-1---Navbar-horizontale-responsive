@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+
+:root {
+    --bg-color: #9abaff;
+    --txt-color: #ffffff;
+    --txt-hover:  rgb(0, 0, 255);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playpen Sans', sans-serif;
+}
+
+.navbar {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:var(--txt-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--txt-hover);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle i {
+    font-size: 25px;
+    color: var(--txt-color);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        text-align: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
